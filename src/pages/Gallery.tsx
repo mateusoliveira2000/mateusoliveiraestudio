@@ -88,8 +88,7 @@ const Gallery = () => {
                 <img
                   src={image.src}
                   alt={image.alt}
-                  width={image.w}
-                  height={image.h}
+                  loading="lazy"
                   loading="lazy"
                   className="w-full h-auto"
                 />
