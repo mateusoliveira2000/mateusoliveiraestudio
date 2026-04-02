@@ -4,15 +4,29 @@ import { useState } from "react";
 import { X } from "lucide-react";
 import ScrollReveal from "@/components/ScrollReveal";
 
-// Importação das imagens da galeria
+// ============================================================
+// 📸 IMPORTAÇÃO DAS IMAGENS DA GALERIA
+// ============================================================
+// Para adicionar novas imagens:
+//   1. Coloque a imagem na pasta src/assets/
+//   2. Adicione um import abaixo (ex: import gallery7 from "@/assets/gallery-7.jpg")
+//   3. Adicione um objeto no array "images" com src, alt, w (largura) e h (altura)
+//   O layout da grid se adapta automaticamente — não é necessário alterar nada mais!
+// ============================================================
 import gallery1 from "@/assets/gallery-1.jpg";
 import gallery2 from "@/assets/gallery-2.jpg";
 import gallery3 from "@/assets/gallery-3.jpg";
 import gallery4 from "@/assets/gallery-4.jpg";
 import gallery5 from "@/assets/gallery-5.jpg";
 import gallery6 from "@/assets/gallery-6.jpg";
+// ➕ Adicione novas imagens aqui apenas alterando o caminho da imagem:
+// import gallery7 from "@/assets/sua-nova-imagem.jpg";
 
-/* Array de imagens com títulos descritivos */
+/*
+ * Array de imagens da galeria.
+ * ➕ Para adicionar uma nova imagem, basta inserir um novo objeto abaixo:
+ *    { src: gallery7, alt: "Descrição da imagem", w: 800, h: 600 },
+ */
 const images = [
   { src: gallery1, alt: "Arquitetura minimalista", w: 800, h: 800 },
   { src: gallery2, alt: "Retrato editorial", w: 700, h: 1000 },
@@ -20,6 +34,8 @@ const images = [
   { src: gallery4, alt: "Detalhes de casamento", w: 800, h: 800 },
   { src: gallery5, alt: "Design de interiores", w: 700, h: 1000 },
   { src: gallery6, alt: "Gastronomia artesanal", w: 800, h: 800 },
+  // ➕ Adicione novas imagens aqui:
+  // { src: gallery7, alt: "Descrição", w: 800, h: 600 },
 ];
 
 const Gallery = () => {
