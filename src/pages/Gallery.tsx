@@ -89,7 +89,6 @@ const Gallery = () => {
                   src={image.src}
                   alt={image.alt}
                   loading="lazy"
-                  loading="lazy"
                   className="w-full h-auto"
                 />
               </div>
