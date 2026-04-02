@@ -5,37 +5,55 @@ import { X } from "lucide-react";
 import ScrollReveal from "@/components/ScrollReveal";
 
 // ============================================================
-// 📸 IMPORTAÇÃO DAS IMAGENS DA GALERIA
+// 📸 IMAGENS DA GALERIA
 // ============================================================
-// Para adicionar novas imagens:
+//
+// ✅ OPÇÃO 1 — Usando imagens locais (pasta src/assets/):
 //   1. Coloque a imagem na pasta src/assets/
-//   2. Adicione um import abaixo (ex: import gallery7 from "@/assets/gallery-7.jpg")
-//   3. Adicione um objeto no array "images" com src, alt, w (largura) e h (altura)
-//   O layout da grid se adapta automaticamente — não é necessário alterar nada mais!
+//   2. Adicione um import (ex: import gallery7 from "@/assets/gallery-7.jpg")
+//   3. Adicione no array "images": { src: gallery7, alt: "Descrição" }
+//
+// ✅ OPÇÃO 2 — Usando link do Google Drive:
+//   1. Suba a foto no Google Drive
+//   2. Clique com botão direito → "Compartilhar" → "Qualquer pessoa com o link"
+//   3. Copie o link de compartilhamento. Ele será assim:
+//      https://drive.google.com/file/d/XXXXXXX/view?usp=sharing
+//   4. Pegue apenas o ID do arquivo (o XXXXXXX no link acima)
+//   5. Cole no array "images" usando este formato:
+//      { src: "https://drive.google.com/thumbnail?id=SEU_ID_AQUI&sz=w1000", alt: "Descrição" }
+//
+//   📌 EXEMPLO COMPLETO com link do Drive:
+//      O link original: https://drive.google.com/file/d/1aBcDeFgHiJkLmNoPqRsT/view?usp=sharing
+//      O ID é: 1aBcDeFgHiJkLmNoPqRsT
+//      No array fica: { src: "https://drive.google.com/thumbnail?id=1aBcDeFgHiJkLmNoPqRsT&sz=w1000", alt: "Minha foto" }
+//
+// O layout da grid se adapta automaticamente — não é necessário alterar nada mais!
 // ============================================================
+
+// Imagens locais (do projeto)
 import gallery1 from "@/assets/gallery-1.jpg";
 import gallery2 from "@/assets/gallery-2.jpg";
 import gallery3 from "@/assets/gallery-3.jpg";
 import gallery4 from "@/assets/gallery-4.jpg";
 import gallery5 from "@/assets/gallery-5.jpg";
 import gallery6 from "@/assets/gallery-6.jpg";
-// ➕ Adicione novas imagens aqui apenas alterando o caminho da imagem:
-// import gallery7 from "@/assets/sua-nova-imagem.jpg";
 
 /*
  * Array de imagens da galeria.
- * ➕ Para adicionar uma nova imagem, basta inserir um novo objeto abaixo:
- *    { src: gallery7, alt: "Descrição da imagem", w: 800, h: 600 },
+ * Aceita tanto imagens locais (importadas acima) quanto links externos (Google Drive, etc.)
+ *
+ * ➕ Para adicionar uma imagem do Google Drive, cole assim:
+ *    { src: "https://drive.google.com/thumbnail?id=SEU_ID_AQUI&sz=w1000", alt: "Descrição da foto" },
  */
 const images = [
-  { src: gallery1, alt: "Arquitetura minimalista", w: 800, h: 800 },
-  { src: gallery2, alt: "Retrato editorial", w: 700, h: 1000 },
-  { src: gallery3, alt: "Natureza serena", w: 1000, h: 700 },
-  { src: gallery4, alt: "Detalhes de casamento", w: 800, h: 800 },
-  { src: gallery5, alt: "Design de interiores", w: 700, h: 1000 },
-  { src: gallery6, alt: "Gastronomia artesanal", w: 800, h: 800 },
-  // ➕ Adicione novas imagens aqui:
-  // { src: gallery7, alt: "Descrição", w: 800, h: 600 },
+  { src: gallery1, alt: "Arquitetura minimalista" },
+  { src: gallery2, alt: "Retrato editorial" },
+  { src: gallery3, alt: "Natureza serena" },
+  { src: gallery4, alt: "Detalhes de casamento" },
+  { src: gallery5, alt: "Design de interiores" },
+  { src: gallery6, alt: "Gastronomia artesanal" },
+  // ➕ Adicione novas imagens aqui (local ou Google Drive):
+  // { src: "https://drive.google.com/thumbnail?id=SEU_ID_AQUI&sz=w1000", alt: "Minha nova foto" },
 ];
 
 const Gallery = () => {
