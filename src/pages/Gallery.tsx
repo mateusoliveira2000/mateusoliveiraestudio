@@ -60,8 +60,8 @@ const images = [
   { src: "https://lh3.googleusercontent.com/d/10wZOT9AzQPQv5U85TRKDTEvdgEBBDil1", alt: "Foto 27" },
   { src: "https://lh3.googleusercontent.com/d/117nL3nP1mHh4QukfVp8qS1C39tIu3X_4", alt: "Foto 28" },
   { src: "https://lh3.googleusercontent.com/d/1f9UHBMtHP3pM_1vX04xhw_qOcF9PrdHe", alt: "Foto 29" },
-  // ➕ Adicione novas imagens aqui (Google Drive):
-  // { src: "https://drive.google.com/thumbnail?id=SEU_ID_AQUI&sz=w1000", alt: "Descrição" },
+  // ➕ Para adicionar novas imagens do Google Drive, use:
+  // { src: "https://lh3.googleusercontent.com/d/SEU_ID_AQUI", alt: "Descrição" },
 ];
 
 const Gallery = () => {
