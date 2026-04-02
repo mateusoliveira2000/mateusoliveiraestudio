@@ -30,30 +30,38 @@ import ScrollReveal from "@/components/ScrollReveal";
 // O layout da grid se adapta automaticamente — não é necessário alterar nada mais!
 // ============================================================
 
-// Imagens locais (do projeto)
-import gallery1 from "@/assets/gallery-1.jpg";
-import gallery2 from "@/assets/gallery-2.jpg";
-import gallery3 from "@/assets/gallery-3.jpg";
-import gallery4 from "@/assets/gallery-4.jpg";
-import gallery5 from "@/assets/gallery-5.jpg";
-import gallery6 from "@/assets/gallery-6.jpg";
-
-/*
- * Array de imagens da galeria.
- * Aceita tanto imagens locais (importadas acima) quanto links externos (Google Drive, etc.)
- *
- * ➕ Para adicionar uma imagem do Google Drive, cole assim:
- *    { src: "https://drive.google.com/thumbnail?id=SEU_ID_AQUI&sz=w1000", alt: "Descrição da foto" },
- */
 const images = [
-  { src: gallery1, alt: "Arquitetura minimalista" },
-  { src: gallery2, alt: "Retrato editorial" },
-  { src: gallery3, alt: "Natureza serena" },
-  { src: gallery4, alt: "Detalhes de casamento" },
-  { src: gallery5, alt: "Design de interiores" },
-  { src: gallery6, alt: "Gastronomia artesanal" },
-  // ➕ Adicione novas imagens aqui (local ou Google Drive):
-  // { src: "https://drive.google.com/thumbnail?id=SEU_ID_AQUI&sz=w1000", alt: "Minha nova foto" },
+  { src: "https://drive.google.com/thumbnail?id=1XwTAvAm19T5zFkJVJ3E6jxA1y56nJ9Rc&sz=w1000", alt: "Foto 1" },
+  { src: "https://drive.google.com/thumbnail?id=1wzJVcU27jaY6B014xg_-ZznKIS1kCVp6&sz=w1000", alt: "Foto 2" },
+  { src: "https://drive.google.com/thumbnail?id=1cp5xH9iNN2fK8ICFPDswt7zi2XIB9pvx&sz=w1000", alt: "Foto 3" },
+  { src: "https://drive.google.com/thumbnail?id=1rOgH44YFyopA8ai9GBGeUKb0OcF3Tj7b&sz=w1000", alt: "Foto 4" },
+  { src: "https://drive.google.com/thumbnail?id=1slyYgx_uU59FcdJZV2AvKgq8laXwMq_z&sz=w1000", alt: "Foto 5" },
+  { src: "https://drive.google.com/thumbnail?id=1SlV4VXunejSpPuABBtDNS8NZDMFASroV&sz=w1000", alt: "Foto 6" },
+  { src: "https://drive.google.com/thumbnail?id=106rJpbgjSV9U-Dvy6fTylsv_fNVGt4kz&sz=w1000", alt: "Foto 7" },
+  { src: "https://drive.google.com/thumbnail?id=1kxls26rnSleUyObe9dPHHWcAid2VPyxS&sz=w1000", alt: "Foto 8" },
+  { src: "https://drive.google.com/thumbnail?id=1BnOzED0Hp4BP1E8m1BzsrGFo_qnVnTOn&sz=w1000", alt: "Foto 9" },
+  { src: "https://drive.google.com/thumbnail?id=12Q9SYWzagL747hEahutDEAkt74HPyC51&sz=w1000", alt: "Foto 10" },
+  { src: "https://drive.google.com/thumbnail?id=1sKsygQbEsffDavn1tYpQW41XUBYFKpkn&sz=w1000", alt: "Foto 11" },
+  { src: "https://drive.google.com/thumbnail?id=1SPqGzHOBxb2q4NlFQ0GTybD-HEsJYQro&sz=w1000", alt: "Foto 12" },
+  { src: "https://drive.google.com/thumbnail?id=1bFcl32LYnzrcZYK4FSMAODKXxhhrH__o&sz=w1000", alt: "Foto 13" },
+  { src: "https://drive.google.com/thumbnail?id=1aacGso1GlA4O_Swr2f2QHSicW2HPKaxN&sz=w1000", alt: "Foto 14" },
+  { src: "https://drive.google.com/thumbnail?id=1M_mLpogij9VooyllvINdEJloD7RDMhBb&sz=w1000", alt: "Foto 15" },
+  { src: "https://drive.google.com/thumbnail?id=1KaSkfBkWsFBREB8fl-bMJK2mjtksOOQ7&sz=w1000", alt: "Foto 16" },
+  { src: "https://drive.google.com/thumbnail?id=1ei-8EER0S8o-NNAsrAyl1JUXnb5QMIDv&sz=w1000", alt: "Foto 17" },
+  { src: "https://drive.google.com/thumbnail?id=1U_2kkhyhZqDocbKu7L4DBx6nqhBOihvu&sz=w1000", alt: "Foto 18" },
+  { src: "https://drive.google.com/thumbnail?id=1eW4Pfbw_oHmpXNFJdjrgg62UflLlwzrD&sz=w1000", alt: "Foto 19" },
+  { src: "https://drive.google.com/thumbnail?id=1N97E1TJ6UReLAhCEQxYjhLUnPT-BGqQj&sz=w1000", alt: "Foto 20" },
+  { src: "https://drive.google.com/thumbnail?id=1mkOd5uDMHCUAXh6Hk-Xl1f4Rc70tuov0&sz=w1000", alt: "Foto 21" },
+  { src: "https://drive.google.com/thumbnail?id=1TQVImTQs5u52XByoRXGpa0GpEFrnac5O&sz=w1000", alt: "Foto 22" },
+  { src: "https://drive.google.com/thumbnail?id=1QS4LPIS5bRDH2UMRGXLY1ScQy9vGkubU&sz=w1000", alt: "Foto 23" },
+  { src: "https://drive.google.com/thumbnail?id=1yuYmwmt5PKo6G48gt_gnRhCpLGPvCik9&sz=w1000", alt: "Foto 24" },
+  { src: "https://drive.google.com/thumbnail?id=1u-QGdWo9GFILqoqfpJsndyj6vK_fLSMy&sz=w1000", alt: "Foto 25" },
+  { src: "https://drive.google.com/thumbnail?id=1A01Ql5l59l3WR7uqgWWZCl_wK01ta8_k&sz=w1000", alt: "Foto 26" },
+  { src: "https://drive.google.com/thumbnail?id=10wZOT9AzQPQv5U85TRKDTEvdgEBBDil1&sz=w1000", alt: "Foto 27" },
+  { src: "https://drive.google.com/thumbnail?id=117nL3nP1mHh4QukfVp8qS1C39tIu3X_4&sz=w1000", alt: "Foto 28" },
+  { src: "https://drive.google.com/thumbnail?id=1f9UHBMtHP3pM_1vX04xhw_qOcF9PrdHe&sz=w1000", alt: "Foto 29" },
+  // ➕ Adicione novas imagens aqui (Google Drive):
+  // { src: "https://drive.google.com/thumbnail?id=SEU_ID_AQUI&sz=w1000", alt: "Descrição" },
 ];
 
 const Gallery = () => {
